@@ -1,8 +1,16 @@
-function leftPad(str, len, char) {
+function isArray(str) {
+	return toString.call(str) == '[object Array]';
+}
+
+function stringToArray(str) {
+  return Array.from(str).map(Number);
+}
+
+function leftPadSlow(str, len, char) {
 	return new Array(len - str.length).fill(!char && char !== 0 ? ' ' : char).join('') + str;
 }
 
-function leftPad2(str, len, ch) {
+function leftPadFast(str, len, ch) {
 	str = String(str);
   var i = -1;
   if (!ch && ch !== 0) ch = ' ';
@@ -32,10 +40,3 @@ function runPerf(fn, count, ...args) {
 [10, 100, 1000, 10000].forEach(x => {
 	console.log('run leftPad2', runPerf(leftPad2, x, 'foo', x));
 });
-
-/* isArray helper */
-function isArray(str) {
-	return toString.call(str) == '[object Array]';
-}
-
-console.log('yep', isArray([]) );
