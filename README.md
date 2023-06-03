@@ -1,1 +1,1 @@
-# js-helpers
+# A collection of helpers written in javascript
