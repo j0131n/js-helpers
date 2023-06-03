@@ -1,3 +1,3 @@
-# A collection of helpers written in javascript
+# Collection of helpers written in javascript
 
-### WIP
+### :spiral_notepad: WIP
