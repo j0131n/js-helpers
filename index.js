@@ -6,6 +6,10 @@ function stringToArray(str) {
   return Array.from(str).map(Number);
 }
 
+function withDecimal (num, decimal = 2, locale = 'en-US') {
+  return parseFloat(num).toLocaleString(locale, { minimumFractionDigits: decimal })
+}
+
 function leftPadSlow(str, len, char) {
 	return new Array(len - str.length).fill(!char && char !== 0 ? ' ' : char).join('') + str;
 }
@@ -21,6 +25,7 @@ function leftPadFast(str, len, ch) {
   }
   return str;
 }
+
 
 function runPerf(fn, count, ...args) {
 	const start = performance.now();
