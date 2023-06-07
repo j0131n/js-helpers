@@ -36,28 +36,6 @@ function excludeFromModel(arr = [], keys = []) {
   return arr;
 }
 
-/* sample usage of excludeFromModel:
-const array = [
-  {
-      name: '1',
-      id: '1',
-      email: ''
-  },
-  {
-      name: '2',
-      id: '2',
-      email: ''
-  }
-];
-excludeFromModel(array, ['id', 'email'])
-output:
-[{
-  name: "1"
-}, {
-  name: "2"
-}]
-*/
-
 /* performance benchmark runner */
 function runPerf(fn, count, ...args) {
 	const start = performance.now();
