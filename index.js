@@ -26,7 +26,39 @@ function leftPadFast(str, len, ch) {
   return str;
 }
 
+/* if you want to remove specific properties from array of objects */
+function excludeFromModel(arr = [], keys = []) {
+  for (let obj of arr) {
+      for (let key of keys) {
+          delete obj[key];
+      }
+  }
+  return arr;
+}
 
+/* sample usage of excludeFromModel:
+const array = [
+  {
+      name: '1',
+      id: '1',
+      email: ''
+  },
+  {
+      name: '2',
+      id: '2',
+      email: ''
+  }
+];
+excludeFromModel(array, ['id', 'email'])
+output:
+[{
+  name: "1"
+}, {
+  name: "2"
+}]
+*/
+
+/* performance benchmark runner */
 function runPerf(fn, count, ...args) {
 	const start = performance.now();
   
