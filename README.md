@@ -32,3 +32,14 @@
   ```
 
 </details>
+
+<details open>
+
+  <summary> Sample Usage of <strong> stringToNumberArray(str) </strong> </summary>
+
+  ```js
+    stringToNumberArray('123456789')
+    output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  ```
+
+</details>

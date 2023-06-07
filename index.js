@@ -2,7 +2,7 @@ function isArray(str) {
 	return toString.call(str) == '[object Array]';
 }
 
-function stringToArray(str) {
+function stringToNumberArray(str) {
   return Array.from(str).map(Number);
 }
 
