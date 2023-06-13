@@ -26,7 +26,6 @@ function leftPadFast(str, len, ch) {
   return str;
 }
 
-/* if you want to remove specific properties from array of objects */
 function excludeFromModel(arr = [], keys = []) {
   for (let obj of arr) {
       for (let key of keys) {
@@ -36,7 +35,6 @@ function excludeFromModel(arr = [], keys = []) {
   return arr;
 }
 
-/* performance benchmark runner */
 function runPerf(fn, count, ...args) {
 	const start = performance.now();
   
