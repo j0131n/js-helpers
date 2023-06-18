@@ -35,6 +35,17 @@ function excludeFromModel(arr = [], keys = []) {
   return arr;
 }
 
+/* check if the number is negative or not */
+function isNegative(v) {
+  const removePercentage = v.replace('%', '');
+  if (removePercentage < 0 || Math.sign(v) === -1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/* performance benchmark runner */
 function runPerf(fn, count, ...args) {
 	const start = performance.now();
   
