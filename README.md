@@ -43,3 +43,17 @@
   ```
 
 </details>
+
+<details open>
+
+  <summary> Sample Usage of <strong> isNegative(v) </strong> </summary>
+
+  ```js
+    isNegative('-2.88%') // output: true
+    isNegative('-0.5%') // output: true
+    isNegative('10%') // output: false
+    isNegative('5%') // output: false
+    isNegative('-123.45%') // output: true
+  ```
+
+</details>
